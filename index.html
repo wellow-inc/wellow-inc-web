@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellow Inc | Official Family Portal</title>
+    
+    <!-- GitHub Pages / SEO Optimization -->
+    <meta name="description" content="Официальный портал семьи Wellow Inc на сервере Online Role-Play Nevada #3. Стань легендой вместе с нами.">
+    <meta name="keywords" content="Wellow Inc, SAMP, Online RP, Nevada 03, Семья САМП, Oliver Wellow">
+    <meta property="og:title" content="Wellow Inc | Official Family Portal">
+    <meta property="og:description" content="Элитное сообщество Nevada Server #3. Единство, дисциплина, влияние.">
+    <meta property="og:image" content="https://picsum.photos/1200/630?grayscale">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#9333ea">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #05010a;
+            color: #f3f4f6;
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        
+        .glass-panel {
+            background: rgba(15, 5, 25, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #initial-loader {
+            position: fixed;
+            inset: 0;
+            background: #05010a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease, visibility 0.6s;
+        }
+        .loader-ring {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(147, 51, 234, 0.1);
+            border-top-color: #9333ea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .market-scroll {
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #05010a; }
+        ::-webkit-scrollbar-thumb { background: #2a104a; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3d166b; }
+
+        .bank-account-glow { text-shadow: 0 0 20px rgba(147, 51, 234, 0.5); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="initial-loader">
+        <div class="loader-ring"></div>
+        <div class="mt-6 text-[11px] uppercase tracking-[0.4em] text-purple-500 font-black">Wellow Inc</div>
+    </div>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
